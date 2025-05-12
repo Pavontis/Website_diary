@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9ffbb3b-6727-4ecb-80fd-5e73327bdde4" name="Changes" comment="" />
+    <list default="true" id="a9ffbb3b-6727-4ecb-80fd-5e73327bdde4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/My_diary_site_Bakiev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/My_diary_site_Bakiev.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +24,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Pavontis/PycharmProjects/My_diary_site_Bakiev"
   }
 }]]></component>
   <component name="SharedIndexes">
