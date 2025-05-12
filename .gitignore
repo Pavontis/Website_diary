@@ -1,0 +1,13 @@
+venv/
+.venv/
+env/
+
+database.db
+
+uploads/
+
+.idea/
+*.iml
+
+__pycache__/
+*.py[cod]
