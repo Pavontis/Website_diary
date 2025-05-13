@@ -39,13 +39,10 @@ def handle_start(chat_id: int, text: str):
 
 def send_hour_reminders():
     now = datetime.datetime.now()
-    print(f"\n[DEBUG] send_hour_reminders запущен, now = {now.isoformat(' ')}")
-
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute("SELECT COUNT(*) FROM users WHERE chat_id IS NOT NULL")
     count_users = c.fetchone()[0]
-    print(f"[DEBUG] users с chat_id: {count_users}")
 
     c.execute(
         """
@@ -59,7 +56,6 @@ def send_hour_reminders():
     """
     )
     rows = c.fetchall()
-    print(f"[DEBUG] Задач для часовых напоминаний: {len(rows)}")
 
     for task_id, title, due_str, chat_id in rows:
         try:
@@ -80,13 +76,11 @@ def send_hour_reminders():
 
 def send_day_reminders():
     now = datetime.datetime.now()
-    print(f"\n[DEBUG] send_day_reminders запущен, now = {now.isoformat(' ')}")
 
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
     c.execute("SELECT COUNT(*) FROM users WHERE chat_id IS NOT NULL")
     count_users = c.fetchone()[0]
-    print(f"[DEBUG] users с chat_id: {count_users}")
 
     c.execute(
         """
@@ -100,7 +94,6 @@ def send_day_reminders():
     """
     )
     rows = c.fetchall()
-    print(f"[DEBUG] Задач для суточных напоминаний: {len(rows)}")
 
     for task_id, title, due_str, chat_id in rows:
         try:
@@ -148,5 +141,4 @@ def main_loop():
 
 
 if __name__ == "__main__":
-    print(f"[DEBUG] Используем файл БД: {DB_PATH}")
     main_loop()
